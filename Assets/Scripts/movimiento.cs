@@ -2,42 +2,24 @@
 using System.Collections;
 
 public class movimiento : MonoBehaviour {
-    public float velocidad;
-	float misidefriction;
-	float miforwarfriction;
-	float mislipsidefriction;
-	float mislipforwarfriction;
+
 	public float giro;
 	public Rigidbody rigid;
 	public WheelCollider frontl;
 	public WheelCollider frontr;
 	public WheelCollider backl;
 	public WheelCollider backr;
-	bool downhill;
+	public GameObject fl;
+	public GameObject fr;
+	public GameObject bl;
+	public GameObject br;
+
+
 	[SerializeField] float centro_masa;
 	[SerializeField] float maxtorque;
+
 	void Start () {
-		rigid.GetComponent<Rigidbody>();
-		rigid.centerOfMass=new Vector3(0.0f,centro_masa,0.0f);
-
-		valores();
-	}
-	void valores(){
-		miforwarfriction=frontl.forwardFriction.stiffness;
-		misidefriction=frontl.sidewaysFriction.stiffness;
-		mislipforwarfriction=0.8f;
-		mislipsidefriction=0.5f;
-	}
-	void setslip(float forwardfriccion,float sidefriccion){
-		forwardfriccion=frontl.forwardFriction.stiffness;
-		forwardfriccion=frontr.forwardFriction.stiffness;
-		forwardfriccion=backl.forwardFriction.stiffness;
-		forwardfriccion=backr.forwardFriction.stiffness;
-
-		sidefriccion=frontl.sidewaysFriction.stiffness;
-		sidefriccion=frontr.sidewaysFriction.stiffness;
-		sidefriccion=backl.sidewaysFriction.stiffness;
-		sidefriccion=backr.sidewaysFriction.stiffness;
+		rigid.centerOfMass = new Vector3 (0.0f, centro_masa, 0.0f);
 	}
 
 	void Update () {
@@ -46,46 +28,60 @@ public class movimiento : MonoBehaviour {
 		frontr.steerAngle = 0;
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			setslip (mislipforwarfriction, mislipsidefriction);
 			frontr.steerAngle = giro;
 			frontl.steerAngle = giro;
-			transform.Rotate (0, giro * Time.deltaTime, 0);
-
 		}
+
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			setslip (mislipforwarfriction, mislipsidefriction);
 			frontl.steerAngle = -giro;
 			frontr.steerAngle = -giro;
-			transform.Rotate (0, -giro * Time.deltaTime, 0);
-
-	
 		}
 
-		/*
-		if(downhill==true){transform.Translate(0,-0.3f*Time.deltaTime,0);}
-	}
-	void OnTriggerEnter(Collider other){
-		
-		if(other.gameObject.tag=="hill"){
-			downhill=true;
-			}
-		if(other.gameObject.tag=="hillout"){
-			downhill=false;
 
-		}
-	}
-	*/
 		float torque = maxtorque * Input.GetAxis ("Vertical");
+
+		float brakeTorque = Mathf.Abs(Input.GetAxis("Jump"));
+
+		if (brakeTorque > 0.001) {
+			brakeTorque = maxtorque;
+			torque = 0;
+		} else {
+			brakeTorque = 0;
+		}
+
 		backl.motorTorque = torque;
 		backr.motorTorque = torque;
-		backl.brakeTorque = 0f;
-		backr.brakeTorque = 0f;
+		backl.brakeTorque = brakeTorque;
+		backr.brakeTorque = brakeTorque;
 		frontl.motorTorque = torque;
 		frontr.motorTorque = torque;
-		frontl.brakeTorque = 0f;
-		frontr.brakeTorque = 0f;
+		frontl.brakeTorque = brakeTorque;
+		frontr.brakeTorque = brakeTorque;
 
-}
+		Quaternion rot;
+		Vector3 pos;
+
+		// Llanta Tracera Izquierda
+		backl.GetWorldPose ( out pos, out rot);
+		bl.transform.position = pos;
+		bl.transform.rotation = rot;
+
+		// Llanta Tracera Derecha
+		backr.GetWorldPose ( out pos, out rot);
+		br.transform.position = pos;
+		br.transform.rotation = rot;
+
+		// Llanta Delantera Izquierda
+		frontl.GetWorldPose ( out pos, out rot);
+		fl.transform.position = pos;
+		fl.transform.rotation = rot;
+
+		// Llanta Delantera Izquierda
+		frontr.GetWorldPose ( out pos, out rot);
+		fr.transform.position = pos;
+		fr.transform.rotation = rot;
+
+	}
 
 
 }

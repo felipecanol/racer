@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour {
 	[SerializeField] GameObject spawnmensaje;
-	AudioSource sonido;
+	//AudioSource sonido;
 
 	void Start(){
-		sonido = GetComponent<AudioSource> ();
+		//sonido = GetComponent<AudioSource> ();
 	}
 	public void carganivel(){
 		SceneManager.LoadScene (1);
@@ -26,14 +26,11 @@ public class menu : MonoBehaviour {
 	}
 	public void mute(){
 		//sonido.mute = true;
-
-
-			Debug.Log ("silencio");
+		Debug.Log ("silencio");
 		
 	}
 	public void unmute(){
 		//sonido.mute = false;
-
 		Debug.Log ("sonido");
 	}
 }
