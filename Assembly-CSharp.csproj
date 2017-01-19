@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{70D8D3E0-D166-E99A-2A49-641AB279AF57}</ProjectGuid>
+    <ProjectGuid>{C6472871-CE41-F24E-BFD5-4A9AE5B8D9AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,11 +46,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Resources\Effects\EdgeDetection.cs" />
+     <Compile Include="Assets\Resources\Effects\PostEffectsBase.cs" />
+     <Compile Include="Assets\Resources\Effects\PostEffectsHelper.cs" />
+     <Compile Include="Assets\Scripts\Semaforo.cs" />
+     <Compile Include="Assets\Scripts\camara.cs" />
+     <Compile Include="Assets\Scripts\control.cs" />
      <Compile Include="Assets\Scripts\main.cs" />
      <Compile Include="Assets\Scripts\menu.cs" />
+     <Compile Include="Assets\Scripts\meta.cs" />
      <Compile Include="Assets\Scripts\movimiento.cs" />
      <Compile Include="Assets\Scripts\scores.cs" />
+     <None Include="Assets\Resources\Effects\EdgeDetectNormals.shader" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -74,9 +81,6 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
