@@ -7,17 +7,22 @@ public class meta : MonoBehaviour {
     public movimiento m;
 
 	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnTriggerEnter(Collider other)
     {
-        m.enabled = false;
+        if(other.gameObject.tag=="jugador"){
+         m.enabled = false;
+         m.backl.brakeTorque = 10000;
+         m.backr.brakeTorque = 10000;
+         m.frontl.brakeTorque = 10000;
+         m.frontr.brakeTorque = 10000;
+         m.backl.motorTorque = 0;
+         m.backr.motorTorque = 0;
+         m.frontl.motorTorque = 0;
+         m.frontr.motorTorque = 0;
+        }
+       
     }
+   
 }

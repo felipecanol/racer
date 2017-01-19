@@ -13,6 +13,7 @@ public class movimiento : MonoBehaviour {
 	public GameObject fr;
 	public GameObject bl;
 	public GameObject br;
+    public float brakeTorque;
 
 
 	[SerializeField] float centro_masa;
@@ -40,7 +41,7 @@ public class movimiento : MonoBehaviour {
 
 		float torque = maxtorque * Input.GetAxis ("Vertical");
 
-		float brakeTorque = Mathf.Abs(Input.GetAxis("Jump"));
+        brakeTorque = brakeTorque < 1000 ? Mathf.Abs(Input.GetAxis("Jump")) : 1000;
 
 		if (brakeTorque > 0.001) {
 			brakeTorque = maxtorque;
