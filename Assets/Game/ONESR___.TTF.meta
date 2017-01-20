@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: fe2b35d0b89355c46bc46f2f2b2a6ce9
+timeCreated: 1484878386
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Onesize Reverse
+  fontNames:
+  - Onesize Reverse
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

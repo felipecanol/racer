@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Semaforo.cs" />
      <Compile Include="Assets\Scripts\camara.cs" />
      <Compile Include="Assets\Scripts\control.cs" />
+     <Compile Include="Assets\Scripts\cronometro.cs" />
      <Compile Include="Assets\Scripts\menu.cs" />
      <Compile Include="Assets\Scripts\meta.cs" />
      <Compile Include="Assets\Scripts\movimiento.cs" />
