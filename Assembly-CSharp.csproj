@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8D7FD0D0-7602-0663-31C3-9249EABDCB22}</ProjectGuid>
+    <ProjectGuid>{209A0153-5C33-1C93-4272-2079100F7C0B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\movimiento.cs" />
      <Compile Include="Assets\Scripts\salir.cs" />
      <Compile Include="Assets\Scripts\scores.cs" />
+     <Compile Include="Assets\Scripts\velocimetro.cs" />
      <None Include="Assets\Resources\Effects\EdgeDetectNormals.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
