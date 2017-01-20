@@ -19,6 +19,7 @@ public class movimiento : MonoBehaviour {
 	[SerializeField] float centro_masa;
 	[SerializeField] float maxtorque;
 
+
 	void Start () {
 		rigid.centerOfMass = new Vector3 (0.0f, centro_masa, 0.0f);
 	}
@@ -41,6 +42,8 @@ public class movimiento : MonoBehaviour {
 
 		float torque = maxtorque * Input.GetAxis ("Vertical");
 
+
+
         brakeTorque = brakeTorque < 1000 ? Mathf.Abs(Input.GetAxis("Jump")) : 1000;
 
 		if (brakeTorque > 0.001) {
@@ -54,8 +57,8 @@ public class movimiento : MonoBehaviour {
 		backr.motorTorque = torque;
 		backl.brakeTorque = brakeTorque;
 		backr.brakeTorque = brakeTorque;
-		frontl.motorTorque = torque;
-		frontr.motorTorque = torque;
+		//frontl.motorTorque = torque;
+		//frontr.motorTorque = torque;
 		frontl.brakeTorque = brakeTorque;
 		frontr.brakeTorque = brakeTorque;
 

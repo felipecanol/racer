@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C6472871-CE41-F24E-BFD5-4A9AE5B8D9AA}</ProjectGuid>
+    <ProjectGuid>{8D7FD0D0-7602-0663-31C3-9249EABDCB22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -52,10 +52,10 @@
      <Compile Include="Assets\Scripts\Semaforo.cs" />
      <Compile Include="Assets\Scripts\camara.cs" />
      <Compile Include="Assets\Scripts\control.cs" />
-     <Compile Include="Assets\Scripts\main.cs" />
      <Compile Include="Assets\Scripts\menu.cs" />
      <Compile Include="Assets\Scripts\meta.cs" />
      <Compile Include="Assets\Scripts\movimiento.cs" />
+     <Compile Include="Assets\Scripts\salir.cs" />
      <Compile Include="Assets\Scripts\scores.cs" />
      <None Include="Assets\Resources\Effects\EdgeDetectNormals.shader" />
  <Reference Include="UnityEngine.UI">

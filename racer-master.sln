@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{970ABA15-73EE-1CB6-EE19-7A630EFA573E}") = "racer-master", "Assembly-CSharp.csproj", "{8D7FD0D0-7602-0663-31C3-9249EABDCB22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D7FD0D0-7602-0663-31C3-9249EABDCB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7FD0D0-7602-0663-31C3-9249EABDCB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7FD0D0-7602-0663-31C3-9249EABDCB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7FD0D0-7602-0663-31C3-9249EABDCB22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

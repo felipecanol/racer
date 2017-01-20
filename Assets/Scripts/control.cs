@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class control : MonoBehaviour {
 	float delay;
 	movimiento mover;
@@ -11,6 +11,10 @@ public class control : MonoBehaviour {
 	}
 
 	void Update () {
+		if(Input.GetKeyUp(KeyCode.R)){
+			SceneManager.LoadScene (1);
+
+		}
 		
 		if(delay<=Time.time-3f && active){
 			delay=Time.time;
