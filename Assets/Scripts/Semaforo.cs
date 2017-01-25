@@ -10,32 +10,38 @@ public class Semaforo : MonoBehaviour {
     float delay;
 
 
+
 	
 	// Update is called once per frame
 	void Update () {
 		Renderer r;
         
-        if (delay <= Time.time - 1f){
+		if (delay <= Time.time - 1f){
             r= luz1.GetComponent<Renderer> ();
             r.sharedMaterial = Resources.Load("Materials/LuzRoja") as Material;
         }
 
         if (delay <= Time.time - 2f)
-        {
+		{
+			
             r = luz2.GetComponent<Renderer>();
             r.sharedMaterial = Resources.Load("Materials/LuzRoja") as Material;
         }
 
         if (delay <= Time.time - 3f)
-        {
+		{
+			
             r = luz3.GetComponent<Renderer>();
             r.sharedMaterial = Resources.Load("Materials/LuzVerde") as Material;
         }
 
-        if (delay <= Time.time - 5f)
+		 if (delay <= Time.time - 5f)
         {
-            delay = Time.time;
+			delay = Time.time;
             Destroy(this.gameObject);
+
+
         }
+
 	}
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class meta : MonoBehaviour {
 
     public movimiento m;
+	[SerializeField] GameObject mensaje;
 
 	// Use this for initialization
 	
@@ -21,7 +22,9 @@ public class meta : MonoBehaviour {
          m.backr.motorTorque = 0;
          m.frontl.motorTorque = 0;
          m.frontr.motorTorque = 0;
+			mensaje.SetActive (true);
         }
+
        
     }
    

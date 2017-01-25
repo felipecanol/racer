@@ -5,6 +5,7 @@ public class control : MonoBehaviour {
 	float delay;
 	movimiento mover;
     bool active = true;
+	public GameObject semaforo;
 	void Start () {
 		mover=GetComponent<movimiento>();
 		mover.enabled=false;
@@ -13,7 +14,8 @@ public class control : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyUp(KeyCode.R)){
 			SceneManager.LoadScene (1);
-
+			Instantiate (semaforo);
+			Time.timeScale = 1f;
 		}
 		
 		if(delay<=Time.time-3f && active){
