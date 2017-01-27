@@ -19,11 +19,13 @@ public class Semaforo : MonoBehaviour {
 	}
 
 
+
 	
 	// Update is called once per frame
 	void Update () {
 		
 		Renderer r;
+
 		if(activo==true){
 			this.gameObject.SetActive (true);
 			activo = false;

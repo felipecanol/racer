@@ -1,5 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\control.cs">
     <Files>
       <File FileName="Assets\Scripts\control.cs" Line="22" Column="12" />
@@ -9,6 +10,15 @@
       <File FileName="Assets\Scripts\activarmeta.cs" Line="11" Column="33" />
       <File FileName="Assets\Scripts\menu.cs" Line="16" Column="23" />
       <File FileName="Assets\Scripts\salir.cs" Line="12" Column="2" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\cronometro.cs">
+    <Files>
+      <File FileName="Assets\Scripts\control.cs" Line="18" Column="24" />
+      <File FileName="Assets\Scripts\Semaforo.cs" Line="42" Column="4" />
+      <File FileName="Assets\Scripts\meta.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\cronometro.cs" Line="10" Column="28" />
+      <File FileName="Assets\Scripts\activarmeta.cs" Line="11" Column="33" />
+>>>>>>> cc083478a4e043b95cada1d3456bb14818283caf
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

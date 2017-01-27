@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 
 public class salir : MonoBehaviour {
-	bool activo=false;
+	bool activo=true;
 	bool presion=false;
 	[SerializeField] GameObject spawnmensajesalida;
 
