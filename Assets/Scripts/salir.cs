@@ -7,15 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class salir : MonoBehaviour {
 	bool activo=false;
+	bool presion=false;
 	[SerializeField] GameObject spawnmensajesalida;
+
 	public void Update(){
-		if(Input.GetKeyUp(KeyCode.Escape)||Input.GetKeyUp(KeyCode.Return)&&activo==false){
+		if(Input.GetKeyUp(KeyCode.Return)&&activo==false&&presion==true){
 			spawnmensajesalida.SetActive (true);
 			Time.timeScale = 0.0f;
-			activo = true;
+			presion = false;
+				activo = true;
 		}
-		else if(Input.GetKeyUp(KeyCode.Return)||Input.GetKeyUp(KeyCode.Escape)&&activo==true){
+		else if(Input.GetKeyUp(KeyCode.Return)&&activo==true&&presion==false){
 			spawnmensajesalida.SetActive (false);
+			presion = true;
 			Time.timeScale = 1f;
 			activo=false;
 		}
@@ -30,7 +34,8 @@ public class salir : MonoBehaviour {
 		Time.timeScale = 1f;
 	}
 	public void aceptar(){
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene (0,LoadSceneMode.Single);
+
 
 	}
 }

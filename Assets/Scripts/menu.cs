@@ -12,7 +12,8 @@ public class menu : MonoBehaviour {
 		//sonido = GetComponent<AudioSource> ();
 	}
 	public void carganivel(){
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (1,LoadSceneMode.Single);
+		Time.timeScale = 1f;
 	}
 	public void opciones(){
 		spawnmensaje.SetActive (true);
