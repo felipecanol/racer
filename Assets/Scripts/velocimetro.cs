@@ -11,6 +11,6 @@ public class velocimetro : MonoBehaviour {
 	}
 	void Update(){
 		km=objeto.velocity.magnitude*3.6f;
-		texto.text = "Km/h: " +Mathf.FloorToInt (km);
+		texto.text = "Km/h : " +Mathf.FloorToInt (km);
 	}
 }

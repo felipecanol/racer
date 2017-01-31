@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Semaforo : MonoBehaviour {
 
 	public GameObject luz1;
@@ -26,10 +26,10 @@ public class Semaforo : MonoBehaviour {
 		
 		Renderer r;
 
-		if(activo==true){
-			this.gameObject.SetActive (true);
-			activo = false;
-		}
+	//	if(activo==true){
+	//		this.gameObject.SetActive (true);
+	//		activo = false;
+	//	}
 
 		if (delay <= Time.time - 1f){
             r= luz1.GetComponent<Renderer> ();
@@ -54,10 +54,10 @@ public class Semaforo : MonoBehaviour {
         {
 			delay = Time.time;
 			this.gameObject.SetActive (false);
-			activo = true;
+			//activo = true;
 
         }
-		Debug.Log (delay);
+
 
 	}
 }

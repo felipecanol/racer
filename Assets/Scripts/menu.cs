@@ -23,7 +23,7 @@ public class menu : MonoBehaviour {
 	}
 	public void salir(){
 		Application.Quit ();
-		Debug.Log ("salio");
+
 	}
 	public void mute(){
 		//sonido.mute = true;
